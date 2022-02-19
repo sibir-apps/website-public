@@ -3,6 +3,7 @@ const app = (() => {
     let menu;
     let fullScreen;
     let contactOption;
+    let isMenuOpened = false;
   
     const init = () => {
       body = document.querySelector('body');
@@ -26,8 +27,19 @@ const app = (() => {
     };
 
     const toggleMenu = () => {
-      toggleClass(body, 'nav-active');
+      isMenuOpened = !body.classList.contains('nav-active');
+
+      toggleClass(menu, 'open');
       toggleClass(fullScreen, 'active');
+
+      if (isMenuOpened === false) {
+        setTimeout(() => {
+          fullScreen.style.width = '0%'
+        }, 350)
+      }
+      else {
+        fullScreen.style.width = '100%'
+      }
     }
   
     init();

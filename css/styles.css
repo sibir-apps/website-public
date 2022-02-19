@@ -102,7 +102,6 @@ footer .content small {
 /* Overlay */
 .overlay { 
     height: 100%;
-    width: 0;
     position: fixed;
     z-index: 2;
     left: 0;
@@ -112,11 +111,12 @@ footer .content small {
     justify-content: center;
     background-color: #131212;
     overflow-x: hidden;
-    transition: ease-in-out 0.6s;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
 }
 
 .overlay.active {
-    width: 100%;
+    opacity: 1;
 }
   
 /* Position the content inside the overlay */
@@ -131,8 +131,8 @@ footer .content small {
     padding: 8px;
     text-decoration: none;
     color: #fff;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
+    display: block;
+    transition: 0.3s;
     font-style: normal;
     font-weight: 600;
     font-size: 80px;
@@ -140,93 +140,96 @@ footer .content small {
     text-align: center;
 }
   
-/* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
     color: #787878;
 }
 
 /* Menu related */
-
 .menu-icon {
+    width: 27px;
+    height: 27px;
     position: fixed;
     right: 10vw;
     top: 50px;
-    z-index: 10;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
     cursor: pointer;
-    float: right;
+    z-index: 2;
 }
 
-.menu-icon__line {
-    height: 2px;
-    width: 30px;
+.menu-icon span {
     display: block;
-    background-color: #ffffff;
-    margin-bottom: 4px;
-    transition: transform 0.2s ease, background-color 0.5s ease;
-}
-
-.menu-icon__line-left {
-    width: 15px;
-}
-
-.menu-icon__line-right {
-    width: 15px;
-    float: right;
-}
-
-body.nav-active .menu-icon__line {
-    /* background-color: #000; */
-    transform: translateX(0px) rotate(-45deg);
-}
-
-body.nav-active .menu-icon__line-left {
-    transform: translateX(1px) rotate(45deg);
-}
-
-body.nav-active .menu-icon__line-right {
-    transform: translateX(-2px) rotate(45deg);
-}
-
-body.nav-active .nav {
-    visibility: visible;
-}
-
-body.nav-active .nav:before, body.nav-active .nav:after {
-    transform: translateX(0%) translateY(0%);
-}
-
-body.nav-active .nav:after {
-    transition-delay: 0.1s;
-}
-
-body.nav-active .nav:before {
-    transition-delay: 0s;
-}
-
-body.nav-active .nav__list-item {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
     opacity: 1;
-    transform: translateX(0%);
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
-body.nav-active .nav__list-item:nth-child(0) {
-    transition-delay: 0.5s;
+.menu-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
-body.nav-active .nav__list-item:nth-child(1) {
-    transition-delay: 0.6s;
+.menu-icon span:nth-child(2) {
+    width: 75%;
+    float: right;
+    position: relative;
+    top: 12px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
-body.nav-active .nav__list-item:nth-child(2) {
-    transition-delay: 0.7s;
+.menu-icon span:nth-child(3) {
+    top: 24px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
-body.nav-active .nav__list-item:nth-child(3) {
-    transition-delay: 0.8s;
+.menu-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
 }
-
-body.nav-active .nav__list-item:nth-child(4) {
-    transition-delay: 0.9s;
+  
+.menu-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+  
+.menu-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 16px;
+    left: 8px;
 }
 
 /* Extra small devices (phones, 600px and down) */
