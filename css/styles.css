@@ -100,8 +100,9 @@ footer .content small {
 }
 
 /* Overlay */
-.overlay { 
+.overlay {
     height: 100%;
+    width: 100%;
     position: fixed;
     z-index: 2;
     left: 0;
@@ -112,18 +113,19 @@ footer .content small {
     background-color: #131212;
     overflow-x: hidden;
     opacity: 0;
-    transition: opacity ease-in-out 0.3s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .overlay.active {
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
   
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
+    width: 100%;
+    text-align: center;
 }
   
 /* The navigation links inside the overlay */

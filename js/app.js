@@ -3,13 +3,15 @@ const app = (() => {
     let menu;
     let fullScreen;
     let contactOption;
-    let isMenuOpened = false;
+    let isMenuOpened;
   
     const init = () => {
       body = document.querySelector('body');
       menu = document.querySelector('.menu-icon');
       fullScreen = document.querySelector('.overlay');
       contactOption = document.querySelector('.contact-option');
+
+      fullScreen.style.visibility = 'hidden';
   
       applyListeners();
     };
@@ -27,18 +29,21 @@ const app = (() => {
     };
 
     const toggleMenu = () => {
-      isMenuOpened = !body.classList.contains('nav-active');
+      isMenuOpened = fullScreen.classList.contains('active');
 
       toggleClass(menu, 'open');
-      toggleClass(fullScreen, 'active');
 
-      if (isMenuOpened === false) {
-        setTimeout(() => {
-          fullScreen.style.width = '0%'
-        }, 350)
+      if (isMenuOpened === true) {
+        // Transition to fade out
+        toggleClass(fullScreen, 'active');
+        setTimeout(() => {          
+          fullScreen.style.visibility = 'hidden';
+        }, 350);
       }
       else {
-        fullScreen.style.width = '100%'
+        // Transition to fade in
+        toggleClass(fullScreen, 'active');
+        fullScreen.style.visibility = 'visible';
       }
     }
   
