@@ -1,0 +1,37 @@
+.buttonContainer {
+    position: absolute;
+    top: 70px;
+    right: 85px;
+    z-index: 10;
+}
+
+.closeButton {
+    cursor: pointer;
+}
+
+.itemContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #313236;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: color ease-in-out 0.3s;
+}
+
+.item:hover {
+    color: #ACACAC;
+}

@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 130%;
+    cursor: pointer;
+    color: #313236;
+}
