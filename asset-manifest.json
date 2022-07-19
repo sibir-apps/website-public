@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d88189d.css",
-    "main.js": "/static/js/main.e06905d7.js",
+    "main.css": "/static/css/main.766e6a31.css",
+    "main.js": "/static/js/main.31d5cb87.js",
     "static/js/787.1bd6df24.chunk.js": "/static/js/787.1bd6df24.chunk.js",
     "static/media/timevity-logo.svg": "/static/media/timevity-logo.8c58fc8a96cd71751a1162cf2723cb55.svg",
     "static/media/sibir-logo.svg": "/static/media/sibir-logo.540e7e218ffc835e40c2b3fe072da441.svg",
     "static/media/sibir-logo-xl.svg": "/static/media/sibir-logo-xl.58ba4a9d804353ca413d42865fe7c7ce.svg",
     "index.html": "/index.html",
-    "main.9d88189d.css.map": "/static/css/main.9d88189d.css.map",
-    "main.e06905d7.js.map": "/static/js/main.e06905d7.js.map",
+    "main.766e6a31.css.map": "/static/css/main.766e6a31.css.map",
+    "main.31d5cb87.js.map": "/static/js/main.31d5cb87.js.map",
     "787.1bd6df24.chunk.js.map": "/static/js/787.1bd6df24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d88189d.css",
-    "static/js/main.e06905d7.js"
+    "static/css/main.766e6a31.css",
+    "static/js/main.31d5cb87.js"
   ]
 }
