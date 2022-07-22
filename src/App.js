@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
 import AboutPage from './modules/about';
 import ContactPage from './modules/contact';
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/apps" element={<Navigate replace to="/timevity" />} />
         <Route path="/timevity" element={<TimevityPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
