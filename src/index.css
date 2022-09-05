@@ -52,7 +52,10 @@ code {
 
 @media (max-width: 767.98px){
   .menu-icon {
+    width: 25px;
+    height: 25px;
     right: 24px;
+    top: 36px;
   }
 }
 

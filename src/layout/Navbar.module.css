@@ -30,6 +30,10 @@
 }
 
 @media (max-width: 767.98px){
+    .logoContainer {
+        margin-top: 16px;
+    }
+
     .navbarContainer {
         padding: 0 24px;
     }
