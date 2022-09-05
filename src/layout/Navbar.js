@@ -3,23 +3,12 @@ import styles from './Navbar.module.css';
 import logo from '../assets/sibir-logo.svg';
 import { Link } from 'react-router-dom';
 
-const MenuButton = ({ open, onClick }) => {
-    return (
-        <div className={`menu-icon ${open ? 'open' : ''}`} onClick={onClick} >
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    )
-}
-
-const Navbar = ({ onMenuClick, menuOpen }) => {
+const Navbar = () => {
     return (
         <div className={styles.navbarContainer}>
             <Link to="/" className={styles.logoContainer}>
                 <img src={logo} alt="Sibir logo" />
             </Link>
-            <MenuButton open={menuOpen} onClick={onMenuClick} />
         </div>
     )
 }
