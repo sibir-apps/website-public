@@ -8,10 +8,14 @@
     padding: 0 85px;
 }
 
+.logoContainer {
+    height: 20px;
+}
+
 .menuIcon {
     width: 27px;
     height: 27px;
-    right: 10vw;
+    right: 85px;
     top: 50px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -23,6 +27,12 @@
     transition: .5s ease-in-out;
     cursor: pointer;
     z-index: 2;
+}
+
+@media (max-width: 767.98px){
+    .navbarContainer {
+        padding: 0 24px;
+    }
 }
 
 .menuIcon span {

@@ -16,7 +16,7 @@ const MenuButton = ({ open, onClick }) => {
 const Navbar = ({ onMenuClick, menuOpen }) => {
     return (
         <div className={styles.navbarContainer}>
-            <Link to="/">
+            <Link to="/" className={styles.logoContainer}>
                 <img src={logo} alt="Sibir logo" />
             </Link>
             <MenuButton open={menuOpen} onClick={onMenuClick} />

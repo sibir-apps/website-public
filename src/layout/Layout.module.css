@@ -13,3 +13,9 @@
     height: 100%;
     overflow: auto;
 }
+
+@media (max-width: 767.98px){
+    .pageContainer {
+        flex-direction: column-reverse;
+    }
+}

@@ -6,3 +6,15 @@
     flex: 1;
     padding: 0 85px;
 }
+
+@media (max-width: 767.98px) {
+    .genericContainer {
+        padding: 0 40px;
+        justify-content: flex-start;
+    }
+
+    .imageContainer {
+        max-height: 192px;
+        justify-content: center;
+    }
+}

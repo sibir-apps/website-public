@@ -2,9 +2,13 @@ import React from 'react'
 import Container from '../../components/Container';
 import { theme } from '../../constants/theme.constants';
 import styles from './index.module.css';
+import sibirLogoMd from '../../assets/sibir-logo-md.svg';
 import sibirLogoXl from '../../assets/sibir-logo-xl.svg';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const AboutPage = () => {
+    const isMobile = useMediaQuery('(max-width: 767.98px)');
+
     return (
         <>
             <Container background={theme.pureWhite}>
@@ -16,8 +20,8 @@ const AboutPage = () => {
                 </div>
             </Container>
             <span className="page-divider"></span>
-            <Container background={theme.numbGray}>
-                <img src={sibirLogoXl} alt="Sibir logo" />
+            <Container background={theme.numbGray} isImageContainer={true}>
+                <img src={isMobile ? sibirLogoMd : sibirLogoXl} alt="Sibir logo" />
             </Container>
         </>
     )
