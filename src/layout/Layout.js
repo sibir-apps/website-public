@@ -22,12 +22,14 @@ const Layout = ({ children }) => {
             setMenuOpen(!menuOpen);
             setTimeout(() => {
                 setMenuMounted(false);
+                document.body.classList.remove('noscroll');
             }, 300);
         }
         else {
             setMenuMounted(true);
             setTimeout(() => {
                 setMenuOpen(true);
+                document.body.classList.add('noscroll');
             }, 0);
         }
     }
