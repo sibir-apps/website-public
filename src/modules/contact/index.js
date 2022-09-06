@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../../components/Container';
 import { theme } from '../../constants/theme.constants';
 import styles from './index.module.css';
@@ -8,6 +8,18 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 
 const ContactPage = () => {
     const isMobile = useMediaQuery('(max-width: 767.98px)');
+
+    const [showImg, setShowImg] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setShowImg(true);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeout);
+        }
+    }, []);
 
     return (
         <>
@@ -19,7 +31,7 @@ const ContactPage = () => {
             </Container>
             <span className="page-divider"></span>
             <Container background={theme.numbGray} isImageContainer={true}>
-                <img src={isMobile ? sibirLogoMd : sibirLogoXl} alt="Sibir logo" />
+                <img className={showImg ? 'fadeIn' : 'hidden'} src={isMobile ? sibirLogoMd : sibirLogoXl} alt="Sibir logo" />
             </Container>
         </>
     )
